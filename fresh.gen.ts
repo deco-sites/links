@@ -8,34 +8,16 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
-import * as $3 from "./routes/api/[...catchall].tsx";
-import * as $4 from "./routes/index.tsx";
-import * as $$0 from "./islands/AddToCartButton.tsx";
-import * as $$1 from "./islands/HeaderButton.tsx";
-import * as $$2 from "./islands/HeaderModals.tsx";
-import * as $$3 from "./islands/HeaderSearchMenu.tsx";
-import * as $$4 from "./islands/SearchControls.tsx";
-import * as $$5 from "./islands/SliderJS.tsx";
-import * as $$$0 from "./sections/BannerGrid.tsx";
-import * as $$$1 from "./sections/Carousel.tsx";
-import * as $$$2 from "./sections/CookieConsent.tsx";
-import * as $$$3 from "./sections/DesignSystem.story.tsx";
-import * as $$$4 from "./sections/Features.tsx";
-import * as $$$5 from "./sections/Footer.tsx";
-import * as $$$6 from "./sections/Header.tsx";
-import * as $$$7 from "./sections/Highlights.tsx";
-import * as $$$8 from "./sections/ProductDetails.tsx";
-import * as $$$9 from "./sections/ProductGallery.tsx";
-import * as $$$10 from "./sections/ProductShelf.tsx";
-import * as $$$11 from "./sections/SearchControls.tsx";
-import * as $$$12 from "./sections/WhatsApp.tsx";
-import * as $$$13 from "deco-sites/std/sections/SEO.tsx";
-import * as $$$14 from "deco-sites/std/sections/SEOPDP.tsx";
-import * as $$$15 from "deco-sites/std/sections/SEOPLP.tsx";
-import * as $$$16 from "deco-sites/std/sections/configOCC.global.tsx";
-import * as $$$17 from "deco-sites/std/sections/configShopify.global.tsx";
-import * as $$$18 from "deco-sites/std/sections/configVTEX.global.tsx";
-import * as $$$19 from "deco-sites/std/sections/configYourViews.tsx";
+import * as $3 from "./routes/index.tsx";
+
+import * as $$$0 from "./sections/Links.tsx";
+import * as $$$1 from "deco-sites/std/sections/SEO.tsx";
+import * as $$$2 from "deco-sites/std/sections/SEOPDP.tsx";
+import * as $$$3 from "deco-sites/std/sections/SEOPLP.tsx";
+import * as $$$4 from "deco-sites/std/sections/configOCC.global.tsx";
+import * as $$$5 from "deco-sites/std/sections/configShopify.global.tsx";
+import * as $$$6 from "deco-sites/std/sections/configVTEX.global.tsx";
+import * as $$$7 from "deco-sites/std/sections/configYourViews.tsx";
 import * as $$$$0 from "$live/functions/EffectSelectPage.ts";
 import * as $$$$1 from "$live/functions/MatchDate.ts";
 import * as $$$$2 from "$live/functions/MatchEnvironment.ts";
@@ -61,38 +43,18 @@ const manifest: DecoManifest = {
     "./routes/[...catchall].tsx": $0,
     "./routes/_app.tsx": $1,
     "./routes/_middleware.ts": $2,
-    "./routes/api/[...catchall].tsx": $3,
-    "./routes/index.tsx": $4,
+    "./routes/index.tsx": $3,
   },
-  islands: {
-    "./islands/AddToCartButton.tsx": $$0,
-    "./islands/HeaderButton.tsx": $$1,
-    "./islands/HeaderModals.tsx": $$2,
-    "./islands/HeaderSearchMenu.tsx": $$3,
-    "./islands/SearchControls.tsx": $$4,
-    "./islands/SliderJS.tsx": $$5,
-  },
+  islands: {},
   sections: {
-    "./sections/BannerGrid.tsx": $$$0,
-    "./sections/Carousel.tsx": $$$1,
-    "./sections/CookieConsent.tsx": $$$2,
-    "./sections/DesignSystem.story.tsx": $$$3,
-    "./sections/Features.tsx": $$$4,
-    "./sections/Footer.tsx": $$$5,
-    "./sections/Header.tsx": $$$6,
-    "./sections/Highlights.tsx": $$$7,
-    "./sections/ProductDetails.tsx": $$$8,
-    "./sections/ProductGallery.tsx": $$$9,
-    "./sections/ProductShelf.tsx": $$$10,
-    "./sections/SearchControls.tsx": $$$11,
-    "./sections/WhatsApp.tsx": $$$12,
-    "deco-sites/std/sections/SEO.tsx": $$$13,
-    "deco-sites/std/sections/SEOPDP.tsx": $$$14,
-    "deco-sites/std/sections/SEOPLP.tsx": $$$15,
-    "deco-sites/std/sections/configOCC.global.tsx": $$$16,
-    "deco-sites/std/sections/configShopify.global.tsx": $$$17,
-    "deco-sites/std/sections/configVTEX.global.tsx": $$$18,
-    "deco-sites/std/sections/configYourViews.tsx": $$$19,
+    "./sections/Links.tsx": $$$0,
+    "deco-sites/std/sections/SEO.tsx": $$$1,
+    "deco-sites/std/sections/SEOPDP.tsx": $$$2,
+    "deco-sites/std/sections/SEOPLP.tsx": $$$3,
+    "deco-sites/std/sections/configOCC.global.tsx": $$$4,
+    "deco-sites/std/sections/configShopify.global.tsx": $$$5,
+    "deco-sites/std/sections/configVTEX.global.tsx": $$$6,
+    "deco-sites/std/sections/configYourViews.tsx": $$$7,
   },
   functions: {
     "$live/functions/EffectSelectPage.ts": $$$$0,
@@ -116,9 +78,9 @@ const manifest: DecoManifest = {
     "deco-sites/std/functions/vtexSuggestions.ts": $$$$18,
   },
   schemas: {
-    "./sections/BannerGrid.tsx": {
+    "./sections/Links.tsx": {
       "inputSchema": {
-        "title": " Banner Grid",
+        "title": " Links",
         "type": "object",
         "properties": {
           "title": {
@@ -128,27 +90,15 @@ const manifest: DecoManifest = {
             ],
             "title": "Title",
           },
-          "itemsPerLine": {
-            "title": "Items Per Line",
-            "type": "object",
-            "properties": {
-              "mobile": {
-                "type": [
-                  "number",
-                  "null",
-                ],
-                "title": "Mobile",
-              },
-              "desktop": {
-                "type": [
-                  "number",
-                  "null",
-                ],
-                "title": "Desktop",
-              },
-            },
-            "required": [],
+          "logo": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Logo",
             "description": "Default is 2 for mobile and all for desktop",
+          },
+          "logoAltText": {
+            "type": "string",
+            "title": "Logo Alt Text",
           },
           "borderRadius": {
             "title": "Border Radius",
@@ -172,830 +122,53 @@ const manifest: DecoManifest = {
             "required": [],
             "description": "Item's border radius in px",
           },
-          "banners": {
+          "links": {
             "type": "array",
             "items": {
-              "title": "Banner",
+              "title": "Link",
               "type": "object",
               "properties": {
-                "srcMobile": {
-                  "format": "image-uri",
+                "text": {
                   "type": "string",
-                  "title": "Src Mobile",
-                },
-                "srcDesktop": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Src Desktop",
+                  "title": "Text",
+                  "description": "Main text on link button",
                 },
                 "alt": {
                   "type": "string",
                   "title": "Alt",
-                  "description": "Image alt text",
+                  "description": "Alt text on hover",
                 },
                 "href": {
                   "type": "string",
                   "title": "Href",
                   "description": "When you click you go to",
                 },
-              },
-              "required": [
-                "srcMobile",
-                "alt",
-                "href",
-              ],
-            },
-            "title": "Banners",
-          },
-        },
-        "required": [
-          "itemsPerLine",
-          "borderRadius",
-          "banners",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Carousel.tsx": {
-      "inputSchema": {
-        "title": " Carousel",
-        "type": "object",
-        "properties": {
-          "images": {
-            "type": "array",
-            "items": {
-              "title": "Banner",
-              "type": "object",
-              "properties": {
-                "desktop": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Desktop",
-                  "description": "desktop otimized image",
-                },
-                "mobile": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Mobile",
-                  "description": "mobile otimized image",
-                },
-                "alt": {
-                  "type": "string",
-                  "title": "Alt",
-                  "description": "Image's alt text",
-                },
-                "action": {
-                  "title": "Action",
-                  "type": "object",
-                  "properties": {
-                    "href": {
-                      "type": "string",
-                      "title": "Href",
-                    },
-                    "title": {
-                      "type": "string",
-                      "title": "Title",
-                    },
-                    "subTitle": {
-                      "type": "string",
-                      "title": "Sub Title",
-                    },
-                    "label": {
-                      "type": "string",
-                      "title": "Label",
-                    },
-                  },
-                  "required": [
-                    "href",
-                    "title",
-                    "subTitle",
-                    "label",
-                  ],
-                },
-              },
-              "required": [
-                "desktop",
-                "mobile",
-                "alt",
-              ],
-            },
-            "title": "Images",
-          },
-          "preload": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Preload",
-            "description":
-              "Check this option when this banner is the biggest image on the screen for image optimizations",
-          },
-          "interval": {
-            "type": [
-              "number",
-              "null",
-            ],
-            "title": "Autoplay interval",
-            "description": "time (in seconds) to start the carousel autoplay",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": null,
-    },
-    "./sections/CookieConsent.tsx": {
-      "inputSchema": null,
-      "outputSchema": null,
-    },
-    "./sections/DesignSystem.story.tsx": {
-      "inputSchema": null,
-      "outputSchema": null,
-    },
-    "./sections/Features.tsx": {
-      "inputSchema": {
-        "title": " Features",
-        "type": "object",
-        "properties": {
-          "features": {
-            "type": "array",
-            "items": {
-              "title": "Feature",
-              "type": "object",
-              "properties": {
-                "icon": {
-                  "type": "string",
-                  "anyOf": [
-                    {
-                      "type": "string",
-                      "const": "ChevronLeft",
-                    },
-                    {
-                      "type": "string",
-                      "const": "ChevronRight",
-                    },
-                    {
-                      "type": "string",
-                      "const": "ChevronUp",
-                    },
-                    {
-                      "type": "string",
-                      "const": "ChevronDown",
-                    },
-                    {
-                      "type": "string",
-                      "const": "QuestionMarkCircle",
-                    },
-                    {
-                      "type": "string",
-                      "const": "User",
-                    },
-                    {
-                      "type": "string",
-                      "const": "ShoppingCart",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Bars3",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Heart",
-                    },
-                    {
-                      "type": "string",
-                      "const": "MagnifyingGlass",
-                    },
-                    {
-                      "type": "string",
-                      "const": "XMark",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Plus",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Minus",
-                    },
-                    {
-                      "type": "string",
-                      "const": "MapPin",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Phone",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Elo",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Mastercard",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Visa",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Pix",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Logo",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Facebook",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Instagram",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Tiktok",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Truck",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Discount",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Return",
-                    },
-                    {
-                      "type": "string",
-                      "const": "CreditCard",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Deco",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Discord",
-                    },
-                    {
-                      "type": "string",
-                      "const": "Trash",
-                    },
-                    {
-                      "type": "string",
-                      "const": "FilterList",
-                    },
-                    {
-                      "type": "string",
-                      "const": "WhatsApp",
-                    },
-                  ],
-                  "title": "Icon",
-                  "description": "Image src",
-                },
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "description": "Title",
-                },
-                "description": {
-                  "type": "string",
-                  "title": "Description",
-                  "description": "Description and Image alt text",
-                },
-              },
-              "required": [
-                "icon",
-                "title",
-                "description",
-              ],
-            },
-            "title": "Features",
-          },
-        },
-        "required": [
-          "features",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Footer.tsx": {
-      "inputSchema": {
-        "title": " Footer",
-        "type": "object",
-        "properties": {
-          "sections": {
-            "type": "array",
-            "items": {
-              "title": "Section",
-              "type": "object",
-              "properties": {
-                "label": {
-                  "type": "string",
-                  "title": "Label",
-                },
-                "children": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "anyOf": [
-                      {
-                        "title": "StringItem",
-                        "type": "object",
-                        "properties": {
-                          "label": {
-                            "type": "string",
-                            "title": "Label",
-                          },
-                          "href": {
-                            "type": "string",
-                            "title": "Href",
-                          },
-                        },
-                        "required": [
-                          "label",
-                          "href",
-                        ],
-                      },
-                      {
-                        "title": "IconItem",
-                        "type": "object",
-                        "properties": {
-                          "icon": {
-                            "type": "string",
-                            "anyOf": [
-                              {
-                                "type": "string",
-                                "const": "ChevronLeft",
-                              },
-                              {
-                                "type": "string",
-                                "const": "ChevronRight",
-                              },
-                              {
-                                "type": "string",
-                                "const": "ChevronUp",
-                              },
-                              {
-                                "type": "string",
-                                "const": "ChevronDown",
-                              },
-                              {
-                                "type": "string",
-                                "const": "QuestionMarkCircle",
-                              },
-                              {
-                                "type": "string",
-                                "const": "User",
-                              },
-                              {
-                                "type": "string",
-                                "const": "ShoppingCart",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Bars3",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Heart",
-                              },
-                              {
-                                "type": "string",
-                                "const": "MagnifyingGlass",
-                              },
-                              {
-                                "type": "string",
-                                "const": "XMark",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Plus",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Minus",
-                              },
-                              {
-                                "type": "string",
-                                "const": "MapPin",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Phone",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Elo",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Mastercard",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Visa",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Pix",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Logo",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Facebook",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Instagram",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Tiktok",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Truck",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Discount",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Return",
-                              },
-                              {
-                                "type": "string",
-                                "const": "CreditCard",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Deco",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Discord",
-                              },
-                              {
-                                "type": "string",
-                                "const": "Trash",
-                              },
-                              {
-                                "type": "string",
-                                "const": "FilterList",
-                              },
-                              {
-                                "type": "string",
-                                "const": "WhatsApp",
-                              },
-                            ],
-                            "title": "Icon",
-                          },
-                        },
-                        "required": [
-                          "icon",
-                        ],
-                      },
-                    ],
-                    "title": "Item",
-                  },
-                  "title": "Children",
-                },
-              },
-              "required": [
-                "label",
-                "children",
-              ],
-            },
-            "title": "Sections",
-          },
-        },
-        "required": [],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Header.tsx": {
-      "inputSchema": {
-        "title": " Header",
-        "type": "object",
-        "properties": {
-          "alerts": {
-            "type": "array",
-            "items": {
-              "type": "string",
-            },
-            "title": "Alerts",
-          },
-          "searchbar": {
-            "title": "Search Bar",
-            "type": "object",
-            "properties": {
-              "placeholder": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Placeholder",
-                "description": "Search bar default placeholder message",
-                "default": "What are you looking for?",
-              },
-              "action": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Page path",
-                "description":
-                  "When user clicks on the search button, navigate it to",
-                "default": "/s",
-              },
-              "name": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Term name",
-                "description":
-                  "Querystring param used when navigating the user",
-                "default": "q",
-              },
-              "query": {
-                "type": [
-                  "string",
-                  "null",
-                ],
-                "title": "Query",
-              },
-            },
-            "required": [],
-          },
-          "navItems": {
-            "type": "array",
-            "items": {
-              "title": "NavItem",
-              "type": "object",
-              "properties": {
-                "label": {
-                  "type": "string",
-                  "title": "Label",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                },
-                "children": {
-                  "title": "Children",
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "label": {
-                        "type": "string",
-                        "title": "Label",
-                      },
-                      "href": {
-                        "type": "string",
-                        "title": "Href",
-                      },
-                      "children": {
-                        "title": "Children",
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "label": {
-                              "type": "string",
-                              "title": "Label",
-                            },
-                            "href": {
-                              "type": "string",
-                              "title": "Href",
-                            },
-                          },
-                          "required": [
-                            "label",
-                            "href",
-                          ],
-                        },
-                      },
-                    },
-                    "required": [
-                      "label",
-                      "href",
-                    ],
-                  },
-                },
                 "image": {
-                  "title": "Image",
-                  "type": "object",
-                  "properties": {
-                    "src": {
-                      "format": "image-uri",
-                      "type": "string",
-                      "title": "Src",
-                    },
-                    "alt": {
-                      "type": [
-                        "string",
-                        "null",
-                      ],
-                      "title": "Alt",
-                    },
-                  },
-                  "required": [],
-                },
-              },
-              "required": [
-                "label",
-                "href",
-              ],
-            },
-            "title": "Navigation items",
-            "description":
-              "Navigation items used both on mobile and desktop menus",
-          },
-          "products": {
-            "$id": "bae848f3957be1cb6ed2c2ac3847787272389ee9",
-            "format": "live-function",
-            "type": "string",
-            "title": "Product suggestions",
-            "description": "Product suggestions displayed on search",
-          },
-          "suggestions": {
-            "$id": "fa622ecbfb24e1b878a945d22f51f46a3e939525",
-            "format": "live-function",
-            "type": "string",
-            "title": "Enable Top Search terms",
-          },
-          "configVTEX": {
-            "$id": "4a94f4ff0e8e4441f26651aaed22f0df82f38c93",
-            "format": "live-function",
-            "type": "string",
-            "title": "Config V T E X",
-            "description": "vtex config used for search autocompletion;",
-          },
-        },
-        "required": [
-          "alerts",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Highlights.tsx": {
-      "inputSchema": {
-        "title": " Highlights",
-        "type": "object",
-        "properties": {
-          "highlights": {
-            "type": "array",
-            "items": {
-              "title": "Highlight",
-              "type": "object",
-              "properties": {
-                "src": {
                   "format": "image-uri",
                   "type": "string",
-                  "title": "Src",
+                  "title": "Image",
                 },
-                "alt": {
+                "icon": {
+                  "format": "image-uri",
                   "type": "string",
-                  "title": "Alt",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                },
-                "label": {
-                  "type": "string",
-                  "title": "Label",
+                  "title": "Icon",
                 },
               },
               "required": [
-                "src",
+                "text",
                 "alt",
                 "href",
-                "label",
               ],
             },
-            "title": "Highlights",
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
+            "title": "Links",
           },
         },
         "required": [
-          "title",
+          "logo",
+          "logoAltText",
+          "borderRadius",
+          "links",
         ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/ProductDetails.tsx": {
-      "inputSchema": {
-        "title": " Product Details",
-        "type": "object",
-        "properties": {
-          "page": {
-            "$id": "bf6c5311c35f44b8ba333ce3c2acd5fed0d8ad8a",
-            "format": "live-function",
-            "type": "string",
-            "title": "Page",
-          },
-        },
-        "required": [
-          "page",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/ProductGallery.tsx": {
-      "inputSchema": {
-        "title": " Product Gallery",
-        "type": "object",
-        "properties": {
-          "page": {
-            "$id": "dc324bcbdc313fdca3eaf23a9c1547d4702ee1ce",
-            "format": "live-function",
-            "type": "string",
-            "title": "Page",
-          },
-        },
-        "required": [
-          "page",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/ProductShelf.tsx": {
-      "inputSchema": {
-        "title": " Product Shelf",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "title": "Title",
-          },
-          "products": {
-            "$id": "bae848f3957be1cb6ed2c2ac3847787272389ee9",
-            "format": "live-function",
-            "type": "string",
-            "title": "Products",
-          },
-          "itemsPerPage": {
-            "type": [
-              "number",
-              "null",
-            ],
-            "title": "Items Per Page",
-          },
-        },
-        "required": [
-          "title",
-          "products",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/SearchControls.tsx": {
-      "inputSchema": {
-        "title": " Search Controls",
-        "type": "object",
-        "properties": {
-          "page": {
-            "$id": "dc324bcbdc313fdca3eaf23a9c1547d4702ee1ce",
-            "format": "live-function",
-            "type": "string",
-            "title": "Page",
-          },
-        },
-        "required": [
-          "page",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/WhatsApp.tsx": {
-      "inputSchema": {
-        "title": " Whats App",
-        "type": "object",
-        "properties": {
-          "phone": {
-            "type": [
-              "number",
-              "null",
-            ],
-            "title": "Phone",
-          },
-        },
-        "required": [],
       },
       "outputSchema": null,
     },

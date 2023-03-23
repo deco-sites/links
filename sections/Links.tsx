@@ -1,18 +1,24 @@
 import Container from "$store/components/ui/Container.tsx";
+import Button from "$store/components/ui/Button.tsx";
+import Text from "$store/components/ui/Text.tsx";
 import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
-export interface Banner {
-  srcMobile: LiveImage;
-  srcDesktop?: LiveImage;
+export interface Link {
   /**
-   * @description Image alt text
+   * @description Main text on link button
+   */
+  text: string;
+  /**
+   * @description Alt text on hover
    */
   alt: string;
   /**
    * @description When you click you go to
    */
   href: string;
+  image?: LiveImage;
+  icon?: LiveImage;
 }
 
 export interface Props {
@@ -20,10 +26,8 @@ export interface Props {
   /**
    * @description Default is 2 for mobile and all for desktop
    */
-  itemsPerLine: {
-    mobile?: number;
-    desktop?: number;
-  };
+  logo: LiveImage;
+  logoAltText: string;
   /**
    * @description Item's border radius in px
    */
@@ -31,14 +35,15 @@ export interface Props {
     mobile?: number;
     desktop?: number;
   };
-  banners: Banner[];
+  links: Link[];
 }
 
-export default function BannnerGrid({
+export default function Links({
   title,
-  itemsPerLine,
+  logo,
+  logoAltText,
   borderRadius,
-  banners = [],
+  links = [],
 }: Props) {
   return (
     <Container>
@@ -51,18 +56,26 @@ export default function BannnerGrid({
               </h2>
 
               <div class="bg-[#e5e5ea] h-[1px] w-full ml-4"></div>
+              <Picture>
+                <Source
+                  media="(max-width: 767px)"
+                  src={logo}
+                  width={100}
+                  height={100}
+                />
+                <img
+                  class="w-full"
+                  sizes="(max-width: 640px) 100vw, 30vw"
+                  src={logo}
+                  alt={logoAltText}
+                  decoding="async"
+                  loading="lazy"
+                />
+              </Picture>
             </div>
           )}
-        <div
-          class={`grid gap-4 md:gap-6 grid-cols-${
-            itemsPerLine && itemsPerLine.mobile ? itemsPerLine.mobile : "2"
-          } md:grid-cols-${
-            itemsPerLine && itemsPerLine.desktop
-              ? itemsPerLine.desktop
-              : banners.length
-          }`}
-        >
-          {banners.map(({ href, srcMobile, srcDesktop, alt }) => (
+        <div>
+          {links.map(({ href, text, alt, image, icon }) => (
             <a
               href={href}
               class={`overflow-hidden ${
@@ -73,28 +86,9 @@ export default function BannnerGrid({
                   : `sm:rounded-none`
               }`}
             >
-              <Picture>
-                <Source
-                  media="(max-width: 767px)"
-                  src={srcMobile}
-                  width={100}
-                  height={100}
-                />
-                <Source
-                  media="(min-width: 768px)"
-                  src={srcDesktop ? srcDesktop : srcMobile}
-                  width={250}
-                  height={250}
-                />
-                <img
-                  class="w-full"
-                  sizes="(max-width: 640px) 100vw, 30vw"
-                  src={srcMobile}
-                  alt={alt}
-                  decoding="async"
-                  loading="lazy"
-                />
-              </Picture>
+              <Button>
+                <Text>{text}</Text>
+              </Button>
             </a>
           ))}
         </div>
