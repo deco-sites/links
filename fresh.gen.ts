@@ -83,92 +83,336 @@ const manifest: DecoManifest = {
         "title": " Links",
         "type": "object",
         "properties": {
-          "title": {
-            "type": [
-              "string",
-              "null",
-            ],
-            "title": "Title",
-          },
-          "logo": {
-            "format": "image-uri",
-            "type": "string",
-            "title": "Logo",
-            "description": "Default is 2 for mobile and all for desktop",
-          },
-          "logoAltText": {
-            "type": "string",
-            "title": "Logo Alt Text",
-          },
-          "borderRadius": {
-            "title": "Border Radius",
+          "header": {
+            "title": "Header",
             "type": "object",
             "properties": {
-              "mobile": {
+              "title": {
                 "type": [
-                  "number",
+                  "string",
                   "null",
                 ],
-                "title": "Mobile",
+                "title": "Title",
               },
-              "desktop": {
+              "description": {
                 "type": [
-                  "number",
+                  "string",
                   "null",
                 ],
-                "title": "Desktop",
+                "title": "Description",
+              },
+              "logo": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Logo",
+              },
+              "textColor": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Text Color",
               },
             },
             "required": [],
-            "description": "Item's border radius in px",
           },
           "links": {
-            "type": "array",
-            "items": {
-              "title": "Link",
-              "type": "object",
-              "properties": {
-                "text": {
-                  "type": "string",
-                  "title": "Text",
-                  "description": "Main text on link button",
-                },
-                "alt": {
-                  "type": "string",
-                  "title": "Alt",
-                  "description": "Alt text on hover",
-                },
-                "href": {
-                  "type": "string",
-                  "title": "Href",
-                  "description": "When you click you go to",
-                },
-                "image": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Image",
-                },
-                "icon": {
-                  "format": "image-uri",
-                  "type": "string",
-                  "title": "Icon",
-                },
-              },
-              "required": [
-                "text",
-                "alt",
-                "href",
-              ],
-            },
             "title": "Links",
+            "type": "object",
+            "properties": {
+              "items": {
+                "type": "array",
+                "items": {
+                  "title": "Link",
+                  "type": "object",
+                  "properties": {
+                    "icon": {
+                      "type": "string",
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "ChevronLeft",
+                        },
+                        {
+                          "type": "string",
+                          "const": "ChevronRight",
+                        },
+                        {
+                          "type": "string",
+                          "const": "ChevronUp",
+                        },
+                        {
+                          "type": "string",
+                          "const": "ChevronDown",
+                        },
+                        {
+                          "type": "string",
+                          "const": "QuestionMarkCircle",
+                        },
+                        {
+                          "type": "string",
+                          "const": "User",
+                        },
+                        {
+                          "type": "string",
+                          "const": "ShoppingCart",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Bars3",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Heart",
+                        },
+                        {
+                          "type": "string",
+                          "const": "MagnifyingGlass",
+                        },
+                        {
+                          "type": "string",
+                          "const": "XMark",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Plus",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Minus",
+                        },
+                        {
+                          "type": "string",
+                          "const": "MapPin",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Phone",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Elo",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Mastercard",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Visa",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Pix",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Logo",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Facebook",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Instagram",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Tiktok",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Truck",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Discount",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Return",
+                        },
+                        {
+                          "type": "string",
+                          "const": "CreditCard",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Deco",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Discord",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Trash",
+                        },
+                        {
+                          "type": "string",
+                          "const": "FilterList",
+                        },
+                        {
+                          "type": "string",
+                          "const": "WhatsApp",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Linkedin",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Share",
+                        },
+                      ],
+                      "title": "Icon",
+                      "description": "20px transparent png recommended",
+                    },
+                    "label": {
+                      "type": "string",
+                      "title": "Label",
+                    },
+                    "href": {
+                      "type": "string",
+                      "title": "Href",
+                    },
+                  },
+                  "required": [
+                    "label",
+                    "href",
+                  ],
+                },
+                "title": "Items",
+              },
+              "style": {
+                "title": "Style",
+                "type": "object",
+                "properties": {
+                  "textColor": {
+                    "type": [
+                      "string",
+                      "null",
+                    ],
+                    "title": "Text Color",
+                  },
+                  "backgroundColors": {
+                    "title": "Background Colors",
+                    "type": "object",
+                    "properties": {
+                      "neutral": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                        },
+                        "title": "Neutral",
+                      },
+                      "hover": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                        },
+                        "title": "Hover",
+                      },
+                    },
+                    "required": [],
+                  },
+                },
+                "required": [],
+              },
+            },
+            "required": [],
+          },
+          "social": {
+            "title": "Social",
+            "type": "object",
+            "properties": {
+              "items": {
+                "type": "array",
+                "items": {
+                  "title": "Social",
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string",
+                      "title": "Href",
+                    },
+                    "label": {
+                      "type": "string",
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "const": "Instagram",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Facebook",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Linkedin",
+                        },
+                        {
+                          "type": "string",
+                          "const": "WhatsApp",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Discord",
+                        },
+                        {
+                          "type": "string",
+                          "const": "Tiktok",
+                        },
+                      ],
+                      "title": "Label",
+                    },
+                  },
+                  "required": [
+                    "href",
+                    "label",
+                  ],
+                },
+                "title": "Items",
+              },
+              "style": {
+                "title": "Style",
+                "type": "object",
+                "properties": {
+                  "iconColor": {
+                    "type": [
+                      "string",
+                      "null",
+                    ],
+                    "title": "Icon Color",
+                  },
+                },
+                "required": [],
+              },
+            },
+            "required": [],
+          },
+          "background": {
+            "title": "Background",
+            "type": "object",
+            "properties": {
+              "image": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Image",
+              },
+              "backgroundColors": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                },
+                "title": "Background Colors",
+              },
+            },
+            "required": [],
           },
         },
-        "required": [
-          "logo",
-          "logoAltText",
-          "borderRadius",
-          "links",
-        ],
+        "required": [],
       },
       "outputSchema": null,
     },
