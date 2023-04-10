@@ -152,7 +152,9 @@ function Links(props: Props) {
 
         <div class="mt-auto text-xs flex flex-row items-center justify-center text-white gap-1">
           Powered by
-          <Icon size={48} id="Deco" class="-mt-1" strokeWidth={0.8} />
+          <a href="https://deco.cx/" target="_blank">
+            <Icon size={48} id="Deco" class="-mt-1" strokeWidth={0.8} />
+          </a>
         </div>
       </footer>
     </BaseContainer>
