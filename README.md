@@ -1,6 +1,6 @@
 # Link list template by deco.cx
 
-A fully featured link tree / link list type of app fully built with deco.cx — with native support for A/B testing, campaigns, and integrated CMS. Build yours for free at [deco.cx](https://deco.cx).
+A fully featured link tree / link list type of app built with deco.cx — with native support for A/B testing, campaigns, and integrated CMS. Build yours for free at [deco.cx](https://deco.cx).
 
 <div style="display: flex; justify-content: center; width: 100%">
 <img width="600px" height="147px"

@@ -113,6 +113,13 @@ const manifest: DecoManifest = {
                 ],
                 "title": "Text Color",
               },
+              "link": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Link",
+              },
             },
             "required": [],
           },

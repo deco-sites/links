@@ -29,6 +29,8 @@ export interface Props {
     logo?: LiveImage;
     /** @description color to be used in title and description */
     textColor?: string;
+    /** @description external link on logo */
+    link?: string;
   };
   links?: {
     items?: Link[];
@@ -62,21 +64,28 @@ function Links(props: Props) {
   const iconColorClass = generateIconColorClass(props);
   const headerTextClass = generateHeaderTextColor(props);
   const linkClass = generateLinkClasses(props);
+  const logoOrIcon = header?.logo
+    ? (
+      <img
+        class="w-full"
+        decoding="async"
+        src={header.logo}
+        alt={header.title}
+      />
+    )
+    : <Icon id="Logo" size={150} />;
+
+  const maybeLink = header?.link
+    ? <a href={header?.link!} target="_blank">{logoOrIcon}</a>
+    : (
+      logoOrIcon
+    );
 
   return (
     <BaseContainer background={background}>
       <header class="flex flex-col justify-center items-center gap-4">
         <div class="rounded-full p-4">
-          {header?.logo
-            ? (
-              <img
-                class="w-full"
-                decoding="async"
-                src={header.logo}
-                alt={header.title}
-              />
-            )
-            : <Icon id="Logo" size={150} />}
+          {maybeLink}
         </div>
 
         {Boolean(header?.title) && (
