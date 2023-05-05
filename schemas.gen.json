@@ -9,7 +9,66 @@
       "additionalProperties": false,
       "properties": {
         "__resolveType": {
-          "type": "string"
+          "type": "string",
+          "not": {
+            "enum": [
+              "deco-sites/std/functions/occProductDetailsPage.ts",
+              "deco-sites/std/functions/segment.ts",
+              "deco-sites/std/functions/shopifyProductDetailsPage.ts",
+              "deco-sites/std/functions/shopifyProductList.ts",
+              "deco-sites/std/functions/shopifyProductListingPage.ts",
+              "deco-sites/std/functions/slugFromParams.ts",
+              "deco-sites/std/functions/vndaProductDetailsPage.ts",
+              "deco-sites/std/functions/vndaProductList.ts",
+              "deco-sites/std/functions/vndaProductListingPage.ts",
+              "deco-sites/std/functions/vtexClient.ts",
+              "deco-sites/std/functions/vtexConfig.ts",
+              "deco-sites/std/functions/vtexLegacyProductDetailsPage.ts",
+              "deco-sites/std/functions/vtexLegacyProductList.ts",
+              "deco-sites/std/functions/vtexLegacyProductListingPage.ts",
+              "deco-sites/std/functions/vtexLegacyRelatedProductsLoader.ts",
+              "deco-sites/std/functions/vtexNavbar.ts",
+              "deco-sites/std/functions/vtexProductDetailsPage.ts",
+              "deco-sites/std/functions/vtexProductList.ts",
+              "deco-sites/std/functions/vtexProductListingPage.ts",
+              "deco-sites/std/functions/vtexSuggestions.ts",
+              "deco-sites/std/functions/vtexWishlist.ts",
+              "deco-sites/std/accounts/occ.ts",
+              "deco-sites/std/accounts/shopify.ts",
+              "deco-sites/std/accounts/vnda.ts",
+              "deco-sites/std/accounts/vtex.ts",
+              "deco-sites/std/accounts/yourViews.ts",
+              "deco-sites/std/loaders/vtexLegacyProductDetailsPage.ts",
+              "deco-sites/std/loaders/vtexLegacyRelatedProductsLoader.ts",
+              "$live/handlers/devPage.ts",
+              "$live/handlers/fresh.ts",
+              "$live/handlers/router.ts",
+              "$live/handlers/routesSelection.ts",
+              "$live/pages/LivePage.tsx",
+              "$live/sections/PageInclude.tsx",
+              "$live/sections/Slot.tsx",
+              "$live/sections/UseSlot.tsx",
+              "deco-sites/links/sections/Links.tsx",
+              "deco-sites/std/sections/Analytics.tsx",
+              "deco-sites/std/sections/configOCC.global.tsx",
+              "deco-sites/std/sections/configShopify.global.tsx",
+              "deco-sites/std/sections/configVNDA.global.tsx",
+              "deco-sites/std/sections/configVTEX.global.tsx",
+              "deco-sites/std/sections/configYourViews.global.tsx",
+              "deco-sites/std/sections/SEO.tsx",
+              "deco-sites/std/sections/SEOPDP.tsx",
+              "deco-sites/std/sections/SEOPLP.tsx",
+              "$live/matchers/MatchAlways.ts",
+              "$live/matchers/MatchDate.ts",
+              "$live/matchers/MatchEnvironment.ts",
+              "$live/matchers/MatchMulti.ts",
+              "$live/matchers/MatchRandom.ts",
+              "$live/matchers/MatchSite.ts",
+              "$live/matchers/MatchUserAgent.ts",
+              "$live/flags/audience.ts",
+              "$live/flags/everyone.ts"
+            ]
+          }
         }
       }
     },
@@ -888,7 +947,8 @@
           "type": "null"
         },
         {
-          "title": "deco-sites/std/functions/occProductDetailsPage.ts",
+          "title": "Oracle Commerce Cloud Product Page Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "required": [
             "__resolveType"
@@ -904,7 +964,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/shopifyProductDetailsPage.ts",
+          "title": "Shopify Product Page Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "required": [
             "__resolveType"
@@ -920,7 +981,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vndaProductDetailsPage.ts",
+          "title": "VTEX Product Page Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "required": [
             "__resolveType"
@@ -936,7 +998,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexLegacyProductDetailsPage.ts",
+          "title": "VTEX Product Page Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "required": [
             "__resolveType"
@@ -952,7 +1015,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexProductDetailsPage.ts",
+          "title": "VTEX Product Page Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "required": [
             "__resolveType"
@@ -968,7 +1032,8 @@
           }
         },
         {
-          "title": "deco-sites/std/loaders/vtexLegacyProductDetailsPage.ts",
+          "title": "VTEX Product Page Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "allOf": [
             {
@@ -1104,7 +1169,7 @@
           "title": "deco-sites/std/commerce/vtex/types.ts@partialSegment"
         },
         {
-          "title": "deco-sites/std/functions/segment.ts",
+          "title": "Read the segment.",
           "type": "object",
           "required": [
             "__resolveType"
@@ -1140,7 +1205,8 @@
           "type": "null"
         },
         {
-          "title": "deco-sites/std/functions/shopifyProductList.ts",
+          "title": "Product list loader",
+          "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1161,7 +1227,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vndaProductList.ts",
+          "title": "Product list loader",
+          "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1182,7 +1249,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexLegacyProductList.ts",
+          "title": "Legacy product list loader",
+          "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1203,7 +1271,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexLegacyRelatedProductsLoader.ts",
+          "title": "VTEX Related Products Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "allOf": [
             {
@@ -1224,7 +1293,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexProductList.ts",
+          "title": "Product list loader",
+          "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1245,7 +1315,8 @@
           }
         },
         {
-          "title": "deco-sites/std/loaders/vtexLegacyRelatedProductsLoader.ts",
+          "title": "VTEX Related Products Loader",
+          "description": "Works on routes of type /:slug/p",
           "type": "object",
           "allOf": [
             {
@@ -1543,7 +1614,8 @@
           "type": "null"
         },
         {
-          "title": "deco-sites/std/functions/shopifyProductListingPage.ts",
+          "title": "Product listing page loader",
+          "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
             {
@@ -1564,7 +1636,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vndaProductListingPage.ts",
+          "title": "Product listing page loader",
+          "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
             {
@@ -1585,7 +1658,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexLegacyProductListingPage.ts",
+          "title": "Product listing page loader",
+          "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
             {
@@ -1606,7 +1680,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexProductListingPage.ts",
+          "title": "Product listing page loader",
+          "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
           "allOf": [
             {
@@ -1627,7 +1702,8 @@
           }
         },
         {
-          "title": "deco-sites/std/functions/vtexWishlist.ts",
+          "title": "Product list loader",
+          "description": "Usefull for shelves and static galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1681,7 +1757,8 @@
           "title": "deco-sites/std/functions/slugFromParams.ts@Slug"
         },
         {
-          "title": "deco-sites/std/functions/slugFromParams.ts",
+          "title": "Get slug from request parameters",
+          "description": "Works on routes of type /:slug/",
           "type": "object",
           "allOf": [
             {
@@ -1818,7 +1895,7 @@
           "title": "deco-sites/std/commerce/vtex/client.ts@ClientVTEX"
         },
         {
-          "title": "deco-sites/std/functions/vtexClient.ts",
+          "title": "Creates a VTEXClient.",
           "type": "object",
           "allOf": [
             {
@@ -1910,7 +1987,8 @@
           "type": "null"
         },
         {
-          "title": "deco-sites/std/functions/vtexConfig.ts",
+          "title": "Loader to get vtex config and pass to components",
+          "description": "Usefull for client side components, like: search auto complete.",
           "type": "object",
           "required": [
             "__resolveType"
@@ -3541,7 +3619,8 @@
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL29jY1Byb2R1Y3REZXRhaWxzUGFnZS50cw==": {
-      "title": "deco-sites/std/functions/occProductDetailsPage.ts",
+      "title": "Oracle Commerce Cloud Product Page Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3557,7 +3636,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3NlZ21lbnQudHM=": {
-      "title": "deco-sites/std/functions/segment.ts",
+      "title": "Read the segment.",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3573,7 +3652,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/shopifyProductDetailsPage.ts",
+      "title": "Shopify Product Page Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3589,7 +3669,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdC50cw==": {
-      "title": "deco-sites/std/functions/shopifyProductList.ts",
+      "title": "Product list loader",
+      "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
         {
@@ -3610,7 +3691,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/shopifyProductListingPage.ts",
+      "title": "Product listing page loader",
+      "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
         {
@@ -3631,7 +3713,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3NsdWdGcm9tUGFyYW1zLnRz": {
-      "title": "deco-sites/std/functions/slugFromParams.ts",
+      "title": "Get slug from request parameters",
+      "description": "Works on routes of type /:slug/",
       "type": "object",
       "allOf": [
         {
@@ -3652,7 +3735,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/vndaProductDetailsPage.ts",
+      "title": "VTEX Product Page Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3668,7 +3752,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==": {
-      "title": "deco-sites/std/functions/vndaProductList.ts",
+      "title": "Product list loader",
+      "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
         {
@@ -3689,7 +3774,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/vndaProductListingPage.ts",
+      "title": "Product listing page loader",
+      "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
         {
@@ -3710,7 +3796,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhDbGllbnQudHM=": {
-      "title": "deco-sites/std/functions/vtexClient.ts",
+      "title": "Creates a VTEXClient.",
       "type": "object",
       "allOf": [
         {
@@ -3731,7 +3817,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhDb25maWcudHM=": {
-      "title": "deco-sites/std/functions/vtexConfig.ts",
+      "title": "Loader to get vtex config and pass to components",
+      "description": "Usefull for client side components, like: search auto complete.",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3747,7 +3834,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/vtexLegacyProductDetailsPage.ts",
+      "title": "VTEX Product Page Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3763,7 +3851,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdC50cw==": {
-      "title": "deco-sites/std/functions/vtexLegacyProductList.ts",
+      "title": "Legacy product list loader",
+      "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
         {
@@ -3784,7 +3873,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/vtexLegacyProductListingPage.ts",
+      "title": "Product listing page loader",
+      "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
         {
@@ -3805,7 +3895,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lSZWxhdGVkUHJvZHVjdHNMb2FkZXIudHM=": {
-      "title": "deco-sites/std/functions/vtexLegacyRelatedProductsLoader.ts",
+      "title": "VTEX Related Products Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "allOf": [
         {
@@ -3847,7 +3938,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/vtexProductDetailsPage.ts",
+      "title": "VTEX Product Page Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "required": [
         "__resolveType"
@@ -3863,7 +3955,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0TGlzdC50cw==": {
-      "title": "deco-sites/std/functions/vtexProductList.ts",
+      "title": "Product list loader",
+      "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
         {
@@ -3884,7 +3977,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "deco-sites/std/functions/vtexProductListingPage.ts",
+      "title": "Product listing page loader",
+      "description": "Returns data ready for search pages like category,brand pages",
       "type": "object",
       "allOf": [
         {
@@ -3926,7 +4020,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhXaXNobGlzdC50cw==": {
-      "title": "deco-sites/std/functions/vtexWishlist.ts",
+      "title": "Product list loader",
+      "description": "Usefull for shelves and static galleries.",
       "type": "object",
       "allOf": [
         {
@@ -4052,7 +4147,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4TGVnYWN5UHJvZHVjdERldGFpbHNQYWdlLnRz": {
-      "title": "deco-sites/std/loaders/vtexLegacyProductDetailsPage.ts",
+      "title": "VTEX Product Page Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "allOf": [
         {
@@ -4073,7 +4169,8 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4TGVnYWN5UmVsYXRlZFByb2R1Y3RzTG9hZGVyLnRz": {
-      "title": "deco-sites/std/loaders/vtexLegacyRelatedProductsLoader.ts",
+      "title": "VTEX Related Products Loader",
+      "description": "Works on routes of type /:slug/p",
       "type": "object",
       "allOf": [
         {
