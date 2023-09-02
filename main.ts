@@ -3,19 +3,24 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="esnext" />
 
-import { $live } from "$live/mod.ts";
-import manifest from "./live.gen.ts";
-import site from "./site.json" assert { type: "json" };
 import { start } from "$fresh/server.ts";
+import decoPlugin from "deco/plugins/deco.ts";
+import partytownPlugin from "partytown/mod.ts";
+import manifest from "./fresh.gen.ts";
+import decoManifest from "./manifest.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 import prefetchPlugin from "prefetch";
-import partytownPlugin from "partytown/mod.ts";
 
-await start($live(manifest, site), {
+await start(manifest, {
   plugins: [
-    partytownPlugin(),
+    decoPlugin(
+      {
+        manifest: decoManifest,
+      },
+    ),
     prefetchPlugin(),
+    partytownPlugin(),
     twindPlugin({
       ...twindConfig,
       selfURL: new URL("./twind.config.ts", import.meta.url).href,

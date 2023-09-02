@@ -1,4 +1,4 @@
-import { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import { ImageWidget } from "apps/admin/widgets.ts";
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
 import Text from "$store/components/ui/Text.tsx";
 import type { ComponentChildren } from "preact";
@@ -26,7 +26,7 @@ export interface Props {
     title?: string;
     description?: string;
     /** @description 150p x 150p image recommended */
-    logo?: LiveImage;
+    logo?: ImageWidget;
     /** @description color to be used in title and description */
     textColor?: string;
     /** @description external link on logo */
@@ -53,7 +53,7 @@ export interface Props {
   };
   background?: {
     /** @description an image will override any background color */
-    image?: LiveImage;
+    image?: ImageWidget;
     /** @description multiple colors will create a gradient effect */
     backgroundColors?: string[];
   };
@@ -77,9 +77,7 @@ function Links(props: Props) {
 
   const maybeLink = header?.link
     ? <a href={header?.link!} target="_blank">{logoOrIcon}</a>
-    : (
-      logoOrIcon
-    );
+    : logoOrIcon;
 
   return (
     <BaseContainer background={background}>
